@@ -18,7 +18,7 @@ class alphaVantage(object):
                 count += 1
             except Exception as e:
                 print("The response code is " + str(response.status_code))
-                print(e)
+                print("Exception occurred "+str(e))
         else:
             print("As per the alphaVantage policy, only 5 api calls are allowed in a minute."
                   + " This program will fetch the stock data after 60 seconds. Please wait !!!")
