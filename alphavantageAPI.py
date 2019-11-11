@@ -3,7 +3,6 @@ import requests as request
 import time
 
 count = 0
-
 class alphaVantage(object):
     def apiCaller(self, stockName, timeInterval):
         response = ''
@@ -25,7 +24,7 @@ class alphaVantage(object):
                   + " This program will fetch the stock data after 60 seconds. Please wait !!!")
             time.sleep(60)
             count = 0
-            self.apiCaller(stockName, timeInterval)
+            self.apiCaller(stockName, timeInterval)  # calling the same method again after 60 secs
 
 
 obj = alphaVantage()
