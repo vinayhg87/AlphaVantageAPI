@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="660963ce-f825-4ed6-a994-ddb9ca661383" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alphavantageAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/alphavantageAPI.py" afterDir="false" />
-    </list>
+    <list default="true" id="660963ce-f825-4ed6-a994-ddb9ca661383" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +16,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TStxngq5VSKJIAMc4s1s93CjhR" />
@@ -78,6 +80,21 @@
       <option name="presentableId" value="Default" />
       <updated>1573465573467</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added comments. no functionality change">
+      <created>1573469201980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573469201980</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added comments. no functionality change">
+      <created>1573469337150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573469337150</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added comments. no functionality change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments. no functionality change" />
   </component>
 </project>
