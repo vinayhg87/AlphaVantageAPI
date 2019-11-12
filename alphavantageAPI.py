@@ -1,12 +1,12 @@
 #  https://www.quora.com/Stock-Market-Which-Python-libraries-can-I-use-to-access-stock-market-data-in-real-time
 import requests as request
 import time
+from os import path
 
 count = 0
 class alphaVantage(object):
     def apiCaller(self, stockName, timeInterval):
         response = ''
-        print(str(time.localtime()[0])+str(time.localtime()[1])+str(time.localtime()[2]))
         global count
         if count < 5:
             try:
@@ -17,7 +17,8 @@ class alphaVantage(object):
                 price = stockData["Time Series (" + str(timeInterval) + "min)"][stockTime]["4. close"]
                 print("The LTP of "+stockName+" is "+str(price))
                 count += 1
-            except Exception as e:
+                self.filehandler()
+            except EOFError as e:
                 print("The response code is " + str(response.status_code))
                 print("Exception occurred "+str(e))
         else:
@@ -26,6 +27,28 @@ class alphaVantage(object):
             time.sleep(60)
             count = 0
             self.apiCaller(stockName, timeInterval)  # calling the same method again after 60 secs
+
+    def filehandler(self):
+        filename = str(time.localtime()[0]) + str(time.localtime()[1]) + str(time.localtime()[2])
+        if path.exists(filename+"_globalCallCount.txt"):
+            fileread = open(filename+"_globalCallCount.txt", "r")
+            readcount = fileread.readline()
+            globalapiCallCount = int(readcount)
+            globalapiCallCount += 1
+            filewrite = open(filename+"_globalCallCount.txt", "w")
+            filewrite.write(str(globalapiCallCount))
+            fileread.close()
+            filewrite.close()
+        else:
+            filewrite = open(filename+"_globalCallCount.txt", "w+")
+            globalapiCallCount=0
+            globalapiCallCount += 1
+            filewrite.write(str(globalapiCallCount))
+            filewrite.close()
+
+
+
+
 
 
 obj = alphaVantage()
