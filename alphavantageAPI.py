@@ -22,7 +22,7 @@ class alphaVantage(object):
                 print("Exception occurred "+str(e))
         else:
             print("As per the alphaVantage policy, only 5 api calls are allowed in a minute."
-                    + " This program will fetch the stock data after 60 seconds. Please wait !!!")
+                       + " This program will fetch the stock data after 60 seconds. Please wait !!!")
             time.sleep(60)
             count = 0
             self.apiCaller(stockName, timeInterval)  # calling the same method again after 60 secs
