@@ -13,7 +13,7 @@ class alphaVantage(object):
             try:
                 self.filehandler()
                 response = request.get("https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=NSE:"
-                            + stockName + "&interval=" + str(timeInterval) + "min&apikey=HFZZDTZ8XT126AW8")
+                                + stockName + "&interval=" + str(timeInterval) + "min&apikey=HFZZDTZ8XT126AW8")
                 stockData = response.json()
                 stockTime = list(stockData["Time Series (" + str(timeInterval) + "min)"])[1]
                 price = stockData["Time Series (" + str(timeInterval) + "min)"][stockTime]["4. close"]
@@ -55,11 +55,11 @@ class alphaVantage(object):
 
 
 obj = alphaVantage()  # object creation
-obj.apiCaller('SBIN', 1)
-obj.apiCaller('TATAMOTORS', 5)
-obj.apiCaller('YESBANK', 5)
-obj.apiCaller('GAIL', 1)
-obj.apiCaller('IOC', 1)
+obj.apiCaller('INDHOTEL', 1)
+obj.apiCaller('SUNTV', 1)
+obj.apiCaller('CENTURYPLY', 1)
+obj.apiCaller('ESSELPACK', 1)
+obj.apiCaller('MSTCLTD', 1)
 obj.apiCaller('NTPC', 1)
 obj.apiCaller('ICICIBANK', 1)
 obj.apiCaller('ZEEL', 1)
