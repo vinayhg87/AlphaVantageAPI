@@ -54,7 +54,7 @@ class alphaVantage(object):
             filewrite.close()
 
 
-obj = alphaVantage()
+obj = alphaVantage()  # object creation
 obj.apiCaller('SBIN', 1)
 obj.apiCaller('TATAMOTORS', 5)
 obj.apiCaller('YESBANK', 5)
